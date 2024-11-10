@@ -4,6 +4,10 @@ import './App.css';
 // import {TableCars, topCars} from "./components/TableCars";
 import Button from "./components/Button";
 import State from "./components/State";
+import {Filter} from "./components/Filter";
+import {data1, data2, Tasks} from "./components/Tasks";
+import {TableCars, topCars} from "./components/TableCars";
+
 
 
 
@@ -20,13 +24,14 @@ function App() {
 
     return (
         <div className="App">
-            {/*<Tasks data={data1} />*/}
-            {/*<Tasks data={data2}/>*/}
-            {/*<TableCars data={topCars}/>*/}
+            <Tasks data={data1} />
+            <Tasks data={data2}/>
+            <TableCars data={topCars}/>
             <Button name={'MyYoutubeChanel-1'} callBack={()=>Button1Foo('im ilya', 21, 'Unosti')}/>
             <Button name={'MyYoutubeChanel-2'} callBack={()=>Button2Foo('im vanya', 23, 'Mira')}/>
             <Button name={'ButtonStupid'} callBack={ButtonStupid}/>
             <State/>
+            <Filter/>
         </div>
     );
 }
